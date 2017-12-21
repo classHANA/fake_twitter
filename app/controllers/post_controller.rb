@@ -24,6 +24,31 @@ class PostController < ApplicationController
   	@post = Post.find(@id)
   	
   end
+  
+  def edit
+    @id = params[:id]
+    @post = Post.find(@id)
+    
+  end
+  
+  def update
+    @id = params[:id]
+    @post = Post.find(@id)
+    
+    @title = params[:title]
+    @content = params[:content]
+    
+    @post.update(title: @title, content: @content)
+    redirect_to "/post/show/#{@id}"
+  end
+
+  def destroy
+    @id = params[:id]
+    @post = Post.find(@id)
+    @post.destroy
+    redirect_to '/'
+
+  end
 
   def index
   	@posts = Post.all

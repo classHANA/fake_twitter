@@ -7,6 +7,8 @@
 	    <h4 class="card-title"><%= post.title %></h4>
 	    <p class="card-text"><%= post.content %></p>
 	    <a href="/post/show/<%= post.id %>" class="btn btn-primary">보기</a>
+	    <a href="/post/edit/<%= post.id %>" class="btn btn-primary">수정</a>
+	    <a href="/post/destroy/<%= post.id %>" class="btn btn-primary">삭제</a>
 	  </div>
 	</div>
 <% end %>
