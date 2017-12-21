@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/login'
+
+  get 'user/login_process'
+
+  get 'user/logout'
+
   root 'post#index'
   get 'post/new'
   get 'post/create'
